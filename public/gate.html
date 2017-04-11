@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    #wrapper {
+      margin: 0 auto;
+      width: 400px;
+      padding: 10px;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+
+    .input[type="number"] {
+      width: 30px;
+    }
+
+  </style>
+
+
+</head>
+  <body>
+    <div id="wrapper">
+    <h1>Gåte</h1>
+      <input id="inp" type="number"></input>
+      <input type="submit" value="OK" />
+    <div id="result" style="display: none;">
+      <p>Dere må reise til stedet der lyngen gror. Se i bladibla</p>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    $( "#inp" ).change(function(e) {
+      console.log(this.value);
+      if(this.value == 13112221) {
+        console.log("Time to show!");
+        $('#result').show();
+      }
+      else {
+        $('#result').hide();
+      }
+    });
+  </script>
+
+  </body>
+</html>
